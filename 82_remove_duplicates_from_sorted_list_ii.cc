@@ -1,4 +1,4 @@
-#include <listnode.h>
+#include "listnode.h"
 
 
 class Solution {
@@ -27,3 +27,10 @@ class Solution {
   }
 };
 
+int main() {
+  Solution sol = Solution();
+  ListNode *head = create_list({1, 2, 3, 3, 4, 4, 5});
+  ListNode *new_head = sol.deleteDuplicates(head);
+  print_list(new_head);
+  return 0;
+}
