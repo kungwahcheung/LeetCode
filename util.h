@@ -31,4 +31,15 @@ void print_vector(const std::vector<std::string> nums) {
   std::cout << nums[size-1] << "]" << std::endl;
 }
 
+void print_vector_array(const std::vector<std::vector<int>> vec_arr) {
+  if (vec_arr.empty()) {
+    std::cout << "[]" << std::endl;
+    return;
+  }
+  std::cout << "[" << std::endl;
+  for (int i = 0; i < vec_arr.size(); ++i)
+    print_vector(vec_arr[i]);
+  std::cout << "]" << std::endl;
+}
+
 #endif  // LEETCODE_UTIL_H_
